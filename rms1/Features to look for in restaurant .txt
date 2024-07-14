@@ -1,0 +1,21 @@
+Features to look for in restaurant management systems
+When determining which restaurant management system to use, look for these five useful features. 
+
+1. Sales and tax tracking
+Your RMS should track all sales data, such as your top menu items, busiest selling times, best-performing team members and profits, to help you make important business decisions. Your software should also provide detailed records for tax reporting purposes.
+
+>> Learn More: How to Increase Your Restaurant’s Profits
+
+2. Order management
+Your restaurant staff should be able to manage tables, reservations, checks and menu items easily through your RMS. You and your managers should also be able to control refunds, voids and comps and view order statuses. If you operate a bar, your RMS should allow you to preauthorize credit cards to open tabs. 
+
+Order management provides a seamless experience for both customers and staff, eliminating the risk of human error and ensuring all information is in one place.
+
+3. Inventory management
+Knowing exactly how much product you have on hand will help you determine when and how much to reorder from your vendors. Some RMS software offers inventory management options, while others may require integration with third-party software to help you with this.
+
+4. Reporting and customer data
+If your chosen RMS tracks and filters your sales and customer data, you’ll have access to a wealth of information to help you grow your business and make better marketing decisions. Understanding your customers will help you better target them through advertising and personalizing their dining experiences. For instance, you can send gift cards or credits for free meals on their birthdays or other anniversaries. 
+
+5. Marketing, gift cards and reward programs
+Consider a system that offers marketing tools, such as promotions and loyalty or rewards programs. Your RMS may have native marketing tools or require third-party software integration for this. If you’re interested in offering gift cards for your restaurant, make sure your RMS can help you manage that as well. 

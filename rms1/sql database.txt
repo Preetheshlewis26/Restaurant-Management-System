@@ -1,0 +1,118 @@
+ CREATE TABLE allsale (
+                                        sname varchar(50) NOT NULL,
+                                        stype varchar(10) NOT NULL,
+                                       sprice int(10) NOT NULL,
+                                       squantity int(10) NOT NULL,
+                                       stotalamou int(10) NOT NULL,
+                                       sendprice int(10) NOT NULL,
+                                       scashs int(10) NOT NULL,
+                                       sbalances int(10) NOT NULL,
+                                       sid int(10) auto_increment NOT NULL primary key,
+                                       date date NOT NULL 
+					Eid varchar(20) );
+CREATE TABLE food (
+ fname varchar(20) NOT NULL,
+ftype varchar(10) NOT NULL,
+fprice int(10) NOT NULL,
+ fid int(10) primary key auto_inccrement NOT NULL
+Eid varchar(20)
+  ) ;
+ CREATE TABLE inzert (
+                                      ->   iname varchar(11) NOT NULL,
+                                      ->   itype varchar(11) NOT NULL,
+                                      ->   iprize int(11) NOT NULL
+                                      -> ) ;
+CREATE TABLE orders (
+                                      ->   oitem varchar(10) NOT NULL,
+                                      ->   oprice int(10) NOT NULL
+                                      -> );
+ CREATE TABLE manregis (
+                                         mname varchar(30) NOT NULL,
+                                         muser varchar(10) NOT NULL,
+                                         midnumber varchar(10) primary key NOT NULL,
+                                         mpass varchar(10) NOT NULL,
+                                         mrepass varchar(10) NOT NULL
+                                       ) ;
+CREATE TABLE rname (
+                                      ->   rname varchar(10) NOT NULL,
+                                      ->   rposition varchar(10) NOT NULL,
+                                      ->   rphone int(10) NOT NULL,
+                                      ->   rsection varchar(10) NOT NULL,
+                                      ->   rid int(5) NOT NULL,
+                                      ->   raddress varchar(25) NOT NULL,
+                                      ->   rage int(5) NOT NULL,
+                                      ->   rmic varchar(11) NOT NULL,
+                                      ->   rdate date NOT NULL
+                                      -> ) ;
+CREATE TABLE room (
+rname varchar(10) NOT NULL,
+rphone int(10) NOT NULL,
+ridnumber int(10) NOT NULL,
+ rroom int(10) NOT NULL,
+ raddress varchar(10) NOT NULL,
+ rdate date NOT NULL,
+ravala varchar(10) NOT NULL,
+rrid int(10) NOT NULL auto_increment primary key,
+Eid varchar(20)
+) ;
+CREATE TABLE sale (
+bill_no int(10) auto_increment primary key NOT NULL,
+item_name varchar(50) NOT NULL,
+ quantity int(10) NOT NULL,
+item_price int NOT NULL,
+amount int(30) NOT NULL,
+fid varchar(10) references food(fid),
+Eid varchar(20)) ;
+CREATE TABLE tableee (
+                                         tname varchar(10) NOT NULL,
+                                         tphone varchar(10) NOT NULL,
+                                         tid varchar(10) NOT NULL,
+                                         tdate varchar(10) NOT NULL,
+                                         ttime varchar(10) NOT NULL,
+                                        availability varchar(10) NOT NULL,
+                                         ttable int(10) NOT NULL,
+                                         ttidd int(11) NOT NULL
+                                      ,Eid varchar(20) ) ;
+CREATE TABLE roles (
+                                         rname varchar(10) NOT NULL,
+                                         rposition varchar(10) NOT NULL,
+                                         rphone varchar(10) NOT NULL,
+                                         rsection varchar(10) NOT NULL,
+                                         rid int(5) NOT NULL primary key auto_increment ,
+                                         raddress varchar(25) NOT NULL,
+                                         rage int(5) NOT NULL,
+                                         rnic varchar(11) references regis(ridnumber) NOT NULL,
+                                         rdate date not null,
+Mid varchar(20) references manregis(midnumber)) ;
+
+ALTER TABLE allsale
+                                      ->   ADD PRIMARY KEY (sid);
+ALTER TABLE food
+                                      ->   ADD PRIMARY KEY (fid);
+ALTER TABLE regis
+                                      ->   ADD PRIMARY KEY (ridnumber);
+ ALTER TABLE rname
+                                      ->   ADD PRIMARY KEY (rid);
+ALTER TABLE room
+                                      ->   ADD PRIMARY KEY (rrid);
+ ALTER TABLE sale
+                                      ->   ADD PRIMARY KEY (bill_no);
+ALTER TABLE tableee
+                                      ->   ADD PRIMARY KEY (ttidd);
+alter table roles modify rphone varchar(10);
+alter table tableee modify tphone varchar(10);
+alter table sale add fid varchar(10) references food(fid);
+alter table sale modify item_name varchar(50) not null;
+
+alter table food add Eid varchar(20) references regis(ridnumber),add Mid varchar(20) references manregis(midnumber);
+alter table allsale add Eid varchar(20) references regis(ridnumber),add Mid varchar(20) references manregis(midnumber);
+
+alter table roles rename staff_details;
+alter table staff_details add Mid varchar(20) references manregis(midnumber);
+
+alter table sale add Eid varchar(20) references regis(ridnumber),add Mid varchar(20) references manregis(midnumber);
+alter table tableee rename column tavai to availibility;
+alter table tableee add Eid varchar(20) references regis(ridnumber),add Mid varchar(20) references manregis(midnumber);
+alter table regis add Mid varchar(20) references manregis(midnumber);
+alter table sale add cust_id varchar(20) not null;
+alter table allsale add cust_id varchar(20) references sale(cust_id);
