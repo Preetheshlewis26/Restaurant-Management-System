@@ -4,8 +4,8 @@
 - Run this folder in Eclipse IDE  # recommended 
 
 - Include MySQL connector & Calender jar file in class path 
-    mysql-connector-java-8.0.13.jar
-    jcalendar-tz-1.3.3-4.jar
+    - mysql-connector-java-8.0.13.jar
+    - jcalendar-tz-1.3.3-4.jar
 
 - create MySQL database and connect it appropriately 
     the script is included in the database folder 
